@@ -37,8 +37,11 @@ namespace Chroma
     //! Constructor about origin
     SftMom(int mom2_max, bool avg_equiv_mom_=false, int j_decay=-1);
     
-		//! Constructor about origin, with a list of momenta 
+    //! Constructor about origin, with a list of momenta 
     SftMom(const multi2d<int> & moms , int j_decay=-1);
+    
+    //! Constructor with a list of momenta and fixed origin_offset
+    SftMom (const multi2d<int>& moms, multi1d<int> origin_off, int j_decay);
 
     //! Construct around some fixed origin_offset
     SftMom(int mom2_max, multi1d<int> origin_offset_,
